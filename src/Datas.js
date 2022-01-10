@@ -1,5 +1,6 @@
 import React from "react";
 import Data from "./Data";
+import { FaRegHeart } from "react-icons/fa";
 
 const Datas = ({ datas }) => {
   return (
@@ -8,6 +9,7 @@ const Datas = ({ datas }) => {
         <h2>Our API Response</h2>
         <div className="underline"></div>
       </div>
+      <FaRegHeart />
       <div>
         {datas.map((data, index) => {
           return <Data key={index} {...data} />;
