@@ -3,6 +3,8 @@ import Datas from "./Datas";
 
 function App() {
   const [datas, setData] = useState([]);
+  const [isLiked, setIsLiked] = useState([]);
+
   const url = `https://api.nasa.gov/planetary/apod?api_key=UUMZnsGDZEnSVVpHXB6zxU6T0n7rbFtSU3bLA2fg`;
   const fetchData = async () => {
     const response = await fetch(url);
