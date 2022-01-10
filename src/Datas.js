@@ -9,7 +9,7 @@ const Datas = ({ datas }) => {
         <div className="underline"></div>
       </div>
       <div>
-        {datas.map((data,index) => {
+        {datas.map((data, index) => {
           return <Data key={index} {...data} />;
         })}
       </div>

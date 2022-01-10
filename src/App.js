@@ -5,6 +5,7 @@ function App() {
   const [datas, setData] = useState([]);
   const [isLiked, setIsLiked] = useState([]);
 
+  // const url = "https://course-api.com/react-tours-project";
   const url = `https://api.nasa.gov/planetary/apod?api_key=UUMZnsGDZEnSVVpHXB6zxU6T0n7rbFtSU3bLA2fg`;
   const fetchData = async () => {
     const response = await fetch(url);
@@ -16,9 +17,9 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <main>
       <Datas datas={datas} />
-    </div>
+    </main>
   );
 }
 
