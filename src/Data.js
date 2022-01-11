@@ -1,6 +1,11 @@
+import { useState } from "react";
 import React from "react";
 
-const Data = ({ hdurl, date, explanation, title }) => {
+const Data = ({ hdurl, date, explanation, title, url }) => {
+  const [isLiked, setIsLiked] = useState([]);
+  const addItem = (id) => {
+    console.log(id);
+  };
   return (
     <article className="single-tour">
       <img src={hdurl} alt={title} />
@@ -10,7 +15,9 @@ const Data = ({ hdurl, date, explanation, title }) => {
           <h4>{date}</h4>
         </div>
         <p>{explanation}</p>
-        <button className="btn">Liked</button>
+        <button className="btn" onClick={() => addItem(url)}>
+          Liked
+        </button>
       </footer>
     </article>
   );
