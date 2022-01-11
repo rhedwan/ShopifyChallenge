@@ -3,7 +3,9 @@ import React from "react";
 
 const Data = ({ hdurl, date, explanation, title, url }) => {
   const [isLiked, setIsLiked] = useState([]);
+  let likedItems;
   const addItem = (id) => {
+    
     console.log(id);
   };
   return (
