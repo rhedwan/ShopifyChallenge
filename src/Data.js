@@ -2,7 +2,16 @@ import React from "react";
 
 const Data = ({ hdurl, date, explanation, title }) => {
   const [like, setLike] = React.useState(true);
-
+  const styling = {
+    like: {
+      color: "green",
+      border: "1px solid green",
+    },
+    unlike: {
+      color: "red",
+      border: "1px solid red",
+    },
+  };
   return (
     <article className="single-tour">
       <img src={hdurl} alt={title} />
@@ -12,7 +21,11 @@ const Data = ({ hdurl, date, explanation, title }) => {
           <h4>{date}</h4>
         </div>
         <p>{explanation}</p>
-        <button className="delete-btn" onClick={() => setLike(!like)}>
+        <button
+          className={"delete-btn"}
+          style={like ? styling.like : styling.unlike}
+          onClick={() => setLike(!like)}
+        >
           {like ? "Liked" : "UnLiked"}
         </button>
       </footer>
