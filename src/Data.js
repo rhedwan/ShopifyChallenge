@@ -26,7 +26,7 @@ const Data = ({ hdurl, date, explanation, title }) => {
           style={like ? styling.like : styling.unlike}
           onClick={() => setLike(!like)}
         >
-          {like ? "Liked" : "UnLiked"}
+          {like ? "Like" : "UnLike"}
         </button>
       </footer>
     </article>

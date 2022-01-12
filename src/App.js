@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
 import Datas from "./Datas";
 import { useFetch } from "./useFetch";
 
-export let newData;
 function App() {
   // const [isLiked, setIsLiked] = useState([]);
 
@@ -11,8 +9,6 @@ function App() {
   const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&start_date=2017-07-08&end_date=2017-07-10
   `;
   const datas = useFetch(url);
-  newData = datas;
-  console.log(datas);
   return (
     <main>
       <Datas datas={datas} />
