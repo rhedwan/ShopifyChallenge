@@ -22,7 +22,7 @@ const Data = ({ hdurl, date, explanation, title }) => {
         </div>
         <p>{explanation}</p>
         <button
-          className={"delete-btn"}
+          className={"like-btn"}
           style={like ? styling.like : styling.unlike}
           onClick={() => setLike(!like)}
         >
