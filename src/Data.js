@@ -2,6 +2,7 @@ import React from "react";
 
 const Data = ({ hdurl, date, explanation, title }) => {
   const [like, setLike] = React.useState(true);
+  const [readMore, setReadMore] = React.useState(false);
   const styling = {
     like: {
       color: "green",
@@ -20,7 +21,12 @@ const Data = ({ hdurl, date, explanation, title }) => {
           <h4>{title}</h4>
           <h4>{date}</h4>
         </div>
-        <p>{explanation}</p>
+        <p>
+          {readMore ? `${explanation}` : `${explanation.substring(0, 250)}...`}
+          <button onClick={() => setReadMore(!readMore)}>
+            {readMore ? `Read Less` : `Read More`}
+          </button>
+        </p>
         <button
           className={"like-btn"}
           style={like ? styling.like : styling.unlike}
