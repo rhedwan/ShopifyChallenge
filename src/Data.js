@@ -1,4 +1,5 @@
 import React from "react";
+import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
 
 const Data = ({ hdurl, date, explanation, title }) => {
   const [like, setLike] = React.useState(true);
@@ -32,7 +33,8 @@ const Data = ({ hdurl, date, explanation, title }) => {
           style={like ? styling.like : styling.unlike}
           onClick={() => setLike(!like)}
         >
-          {like ? "Like" : "UnLike"}
+          {like ? "Like  " : "UnLike  "}
+          {like ? <FaThumbsUp /> : <FaThumbsDown/>}
         </button>
       </footer>
     </article>
